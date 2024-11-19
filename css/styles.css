@@ -1,0 +1,670 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+header {
+    background-color: #444;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+
+/* Home Section (Banner) */
+#home {
+    position: relative;
+    width: 100%;
+    height: 900px; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Banner Wrapper */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0; /* Light background in light mode */
+    transition: background-color 0.3s ease;
+    border-radius: 10px; /* Optional: makes edges rounded */
+}
+
+/* Banner Image */
+.banner img {
+    width: 260px; /* Set the width for the profile image */
+    height: 300px; /* Set the height */
+    border-radius: 20%; /* Circular image */
+    margin-right: 30px; /* Space between the image and the text */
+}
+
+/* Banner Text */
+.banner-text {
+    color: #333; /* Default text color in light mode */
+    text-align: left;
+    max-width: 500px;
+}
+
+.banner-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.banner-text p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    justify-content: start;
+    margin-top: 20px;
+}
+
+.social-icons box-icon {
+    font-size: 2rem; /* Icon size */
+    color: #333; /* Default icon color */
+    margin-right: 15px; /* Space between icons */
+    transition: color 0.6s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Effect */
+.social-icons box-icon:hover {
+    transform: scale(2.1); /* Slight zoom effect on hover */
+}
+
+/* Styling for CV Buttons */
+.cv-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+}
+
+.cv-buttons .btn {
+    background-color: #008080;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.cv-buttons .btn:hover {
+    transform: translateY(-5px); /* Lift the card */
+    box-shadow: 0 6px 6px rgba(2, 229, 236, 0.973); /* Darker shadow on hover */
+}
+
+.cv-buttons .btn:active {
+    background-color: #008080;
+}
+
+
+/* Dark Mode Styles */
+body.night-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Night Mode Header & Footer */
+header.night-mode {
+    background-color: #1d1d1d;
+}
+
+header nav ul li a.night-mode {
+    color: #e0e0e0;
+}
+
+footer.night-mode {
+    background-color: #1d1d1d;
+    color: #e0e0e0;
+}
+
+/* Home Section in Night Mode */
+body.night-mode #home {
+    background-color: #333;
+}
+
+body.night-mode .banner {
+    background-color: #444;
+}
+
+body.night-mode .banner-text {
+    color: white;
+}
+/* About Section Styles */
+#about {
+    height: 700px;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+}
+
+/* About Container */
+.about-container {
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+}
+
+/* About Image Styling */
+.about-img {
+    width: 250px; /* Fixed width for the image */
+    height: 250px; /* Fixed height for the image */
+    border-radius: 5%; /* Make the image round */
+    object-fit: cover; /* Ensure image fits nicely inside the container */
+    margin-right: 30px; /* Space between image and text */
+    flex-shrink: 0; /* Prevents image from shrinking */
+}
+
+/* About Text Styling */
+.about-text {
+    max-width: 600px; /* Restricts text width */
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #555;
+}
+/* night-mode effect for contact */
+body.night-mode #about{
+    background-color: #333; /* Darker card background */
+}
+
+body.night-mode .about-container h2 {
+    color: #fff; /* Darker card background */
+}
+body.night-mode .about-container p {
+    color: #fff; /* Darker card background */
+}
+
+/* Portfolio Section Styles */
+#portfolio {
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+#portfolio h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+#portfolio h3 {
+    text-align: center;
+    font-size: 1rem;
+}
+#portfolio p {
+    text-align: left;
+    font-size: 1rem;
+}
+
+/* Projects Container */
+.projects {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    margin: 0 auto;
+}
+
+/* Individual Project Cards */
+.project {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 200px; /* Adjust image size */
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    font-size: 1.8rem;
+    margin: 10px 0;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #383030;
+    margin-bottom: 20px;
+}
+
+.project a {
+    text-decoration: none;
+    color: #008080;
+    font-weight: bold;
+}
+
+/* Hover effect for projects */
+.project:hover {
+    transform: translateY(-10px); /* Lift the card */
+    box-shadow: 0 6px 16px rgba(2, 229, 236, 0.973); /* Darker shadow on hover */
+}
+
+/* Night Mode Styles for Portfolio */
+body.night-mode #portfolio {
+    background-color: #444; /* Dark background in night mode */
+}
+
+body.night-mode .project {
+    background-color: #333; /* Darker card background */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.night-mode .project a {
+    color: #4fa3f7; /* Brighter link color in night mode */
+}
+body.night-mode .project p{
+    color: #f8f8f8;
+}
+/* Hover effect for projects */
+body.night-mode .project:hover {
+    transform: translateY(-10px); /* Lift the card */
+    box-shadow: 0 6px 16px rgba(2, 229, 236, 0.973); /* Darker shadow on hover */
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .projects {
+        justify-content: center; /* Center projects on smaller screens */
+    }
+}
+
+/* Field of Expertise Section */
+#expertise {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#expertise h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.expertise-container {
+    display: flex;
+    flex-direction: row; /* Ensure items are aligned in a row */
+    gap: 2px;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.badge {
+    display: flex;
+    flex-direction: row; /* Align contents of badge horizontally */
+    align-items: center;
+    padding: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.badge img {
+    max-width: 100%; /* Prevent image from overflowing its container */
+    height: auto;
+}
+
+.badge svg {
+    background-color: whitesmoke;
+}
+
+.badge:hover {
+    transform: translateY(-10px);  /* Hover effect: slightly lift the badge */
+}
+
+/* Night Mode Styles for Contact */
+body.night-mode #expertise {
+    background-color: #333; /* Darker background for night mode */
+}
+body.night-mode #expertise h2 {
+    color: #fff;
+}
+body.night-mode svg {
+    background-color: #333; /* Darker background for night mode */
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .expertise-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));  /* Adjust grid for small screens */
+    }
+
+    .badge img {
+        width: 30px;  /* Adjust image size on small screens */
+    }
+}
+
+
+/* Contact Section Styles */
+#contact {
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+#contact h2 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Contact Card Styles */
+.contact-card {
+    background-color: #fff;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto; /* Center the card */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 6px 16px rgba(2, 229, 236, 0.973); /* Darker shadow on hover */
+}
+
+/* Form Input Styles */
+.contact-card input,
+.contact-card textarea,
+.contact-card button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.contact-card input[type="text"],
+.contact-card input[type="email"],
+.contact-card input[type="number"] {
+    background-color: #f9f9f9;
+}
+
+.contact-card textarea {
+    resize: vertical; /* Allow vertical resizing */
+    height: 150px;
+    background-color: #f9f9f9;
+}
+
+/* Button Styles */
+.contact-card button {
+    background-color: #008080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-card button:hover {
+    background-color: #0c7c15; /* Darker blue on hover */
+}
+
+/* Night Mode Styles for Contact */
+body.night-mode #contact {
+    background-color: #333; /* Darker background for night mode */
+}
+
+body.night-mode #contact h2 {
+    color: #fff; /* Darker background for night mode */
+}
+
+body.night-mode .contact-card {
+    background-color: #444; /* Darker card background */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.night-mode .contact-card input,
+body.night-mode .contact-card textarea,
+body.night-mode .contact-card button {
+    background-color: #777; /* Darker inputs and button in night mode */
+    color: #e0e0e0;
+    border: 1px solid #888;
+}
+
+body.night-mode .contact-card button {
+    background-color: #008080;
+}
+
+body.night-mode .contact-card button:hover {
+    background-color: #0c7c15;
+}
+/* Hover effect for projects */
+body.night-mode .contact-card:hover {
+    transform: translateY(-10px); /* Lift the card */
+    box-shadow: 0 6px 16px rgba(2, 229, 236, 0.973); /* Darker shadow on hover */
+}
+
+/* Media Query for Smaller Screens (Mobile) */
+@media screen and (max-width: 768px) {
+    #contact {
+        padding: 30px 15px; /* Reduce padding for smaller screens */
+    }
+
+    .contact-card {
+        padding: 20px; /* Reduce padding inside the card */
+        width: 100%; /* Full width of the container */
+        max-width: 400px; /* Maximum width */
+    }
+
+    .contact-card input,
+    .contact-card textarea {
+        font-size: 1rem; /* Slightly smaller font size for mobile */
+    }
+
+    .contact-card button {
+        font-size: 1.2rem; /* Larger button font size for easy clicking */
+    }
+}
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin: 10px 15px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+.footer-links a:hover {
+    color: #007BFF;
+}
+
+.footer-logo img{
+    margin-top: 1px;
+    width: 150px;
+    height: 150px;
+}
+
+.footer-attribution {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.footer-attribution a {
+    color: #fff;
+}
+
+.footer-attribution a:hover {
+    color: #007BFF;
+}
+
+.footer-copyright {
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+
+
+button {
+    margin: 10px;
+    padding: 10px;
+    background-color: #008080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #008080;
+}
+
+body.night-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+#night-mode-toggle.night-mode {
+    filter: invert(1);
+}
+
+/* Hide sun/moon icons based on mode */
+#moon-icon {
+    display: none;
+}
+
+body.night-mode #moon-icon {
+    display: inline-block;
+}
+
+body.night-mode #sun-icon {
+    display: none;
+}
+
+ /* CSS for the contact section and pop-up */
+ body.no-scroll {
+    overflow: hidden;  /* Prevent scrolling */
+    position: fixed;   /* Prevent background from moving */
+    width: 100%;       /* Prevent horizontal scroll */
+}
+.popup {
+    display: none;  /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Ensure the pop-up is on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Allow scrolling on the pop-up itself */
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    backdrop-filter: blur(5px);  /* Apply blur effect with 15px strength */
+    -webkit-backdrop-filter: blur(5px); /* For Safari */
+}
+
+.popup-content {
+    background-color: #f0f0f0;
+    color:#000;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    color: #000;
+    font-size: 28px;
+    font-weight: bold;
+    position: fixed;
+    right: 10px;
+    top: 5px;
+}
+
+.close:hover,
+.close:focus {
+    color: #008080;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    
+    transform: translateY(-10px); /* Lift the card */
+    box-shadow: 0 8px 16px rgba(2, 229, 236, 0.973); /* Darker shadow on hover */
+}
