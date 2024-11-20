@@ -51,21 +51,21 @@ header button {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding:0;
     transition: background-color 0.3s ease;
-    padding: 0px;
-    box-sizing: border-box;
 }
 
 /* Banner Wrapper */
 .banner {
     display: flex;
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
+    padding:0;
     width: 100%;
     height: 100%;
     background-color: #f0f0f0; /* Light background in light mode */
     transition: background-color 0.3s ease;
-    border-radius: 10px; /* Optional: makes edges rounded */
 }
 
 /* Banner Image */
@@ -79,12 +79,13 @@ header button {
 /* Banner Text */
 .banner-text {
     color: #333; /* Default text color in light mode */
+    padding: 20px;
     text-align: left;
     max-width: 500px;
 }
 
 .banner-text h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -323,13 +324,6 @@ body.night-mode .project:hover {
     box-shadow: 0 6px 16px rgba(2, 229, 236, 0.973); /* Darker shadow on hover */
 }
 
-/* Media Query for Smaller Screens */
-@media screen and (max-width: 768px) {
-    .projects {
-        justify-content: center; /* Center projects on smaller screens */
-    }
-}
-
 /* Field of Expertise Section */
 #expertise {
     padding: 40px 0;
@@ -346,10 +340,10 @@ body.night-mode .project:hover {
 .expertise-container {
     display: flex;
     flex-direction: row; /* Ensure items are aligned in a row */
-    gap: 2px;
+    gap: 1px;
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
-    max-width: 750px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -384,19 +378,6 @@ body.night-mode #expertise h2 {
 body.night-mode svg {
     background-color: #333; /* Darker background for night mode */
 }
-
-
-/* Mobile responsiveness */
-@media (max-width: 600px) {
-    .expertise-container {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));  /* Adjust grid for small screens */
-    }
-
-    .badge img {
-        width: 30px;  /* Adjust image size on small screens */
-    }
-}
-
 
 /* Contact Section Styles */
 #contact {
@@ -500,30 +481,6 @@ body.night-mode .contact-card:hover {
     transform: translateY(-10px); /* Lift the card */
     box-shadow: 0 6px 16px rgba(2, 229, 236, 0.973); /* Darker shadow on hover */
 }
-
-/* Media Query for Smaller Screens (Mobile) */
-@media screen and (max-width: 768px) {
-    #contact {
-        padding: 30px 15px; /* Reduce padding for smaller screens */
-    }
-
-    .contact-card {
-        padding: 20px; /* Reduce padding inside the card */
-        width: 100%; /* Full width of the container */
-        max-width: 400px; /* Maximum width */
-    }
-
-    .contact-card input,
-    .contact-card textarea {
-        font-size: 1rem; /* Slightly smaller font size for mobile */
-    }
-
-    .contact-card button {
-        font-size: 1.2rem; /* Larger button font size for easy clicking */
-    }
-}
-
-
 
 /* Footer Styles */
 footer {
@@ -668,3 +625,861 @@ body.night-mode #sun-icon {
     transform: translateY(-10px); /* Lift the card */
     box-shadow: 0 8px 16px rgba(2, 229, 236, 0.973); /* Darker shadow on hover */
 }
+
+/* Mobile Devices (small) */
+@media (max-width: 480px) {
+    /* Styles for small mobile devices */
+    /* header */
+    header {
+        background-color: #444;
+        color: #fff;
+        padding: 7px 0;
+        text-align: center;
+    }
+    
+    header nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    header nav ul li {
+        display: inline-block;
+        margin: 0 5px;
+    }
+    
+    header button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 7px;
+    }
+    
+    .icon {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+    }
+
+    #home{
+      /* Example styles for these sections on small devices */
+      padding: 0;
+      text-align: center;
+    }
+    .banner img {
+        width: 240px; /* Set the width for the profile image */
+        height: 280px; /* Set the height */
+        border-radius: 20%; /* Circular image */
+    }
+    .banner-text {
+        color: #333; /* Default text color in light mode */
+        padding: 20px;
+        text-align: left;
+        max-width: 500px;
+    }
+    
+    .banner-text h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+    
+    .banner-text p {
+        font-size: 1rem;
+        margin-top: 10px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    /* About Section Styles */
+    #about {
+        height: 850px;
+        padding: 50px 20px;
+    }
+    .about-text h2{
+        font-size: 2rem;
+        padding: 10px;
+    }
+    .about-text p{
+        font-size: 1rem;
+        padding: 10px;
+    }
+    /* projects */
+    .projects {
+        justify-content: center; /* Center projects on smaller screens */
+    }
+    .project a {
+        text-decoration: none;
+        color: #008080;
+        font-weight: bold;
+    }
+
+    /* badge */
+    .badge {
+        padding: 0;
+    }
+    .badge img {
+        max-width: 30px;  /* Adjust image size for larger screens */
+    }
+    .svg {
+        max-width: 30px;  /* Adjust SVG size for larger screens */
+    }
+
+    /* contact */
+    #contact {
+        padding: 15px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .contact-card {
+        padding: 10px; /* Reduce padding inside the card */
+        width: 100%; /* Full width of the container */
+        max-width: 350px; /* Maximum width */
+    }
+
+    .contact-card input,
+    .contact-card textarea {
+        font-size: 1rem; /* Slightly smaller font size for mobile */
+    }
+
+    .contact-card button {
+        font-size: 1rem; /* Larger button font size for easy clicking */
+    }
+
+/* Footer Styles */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin: 10px 10px;
+}
+
+.footer-logo img{
+    margin-top: 1px;
+    width: 100px;
+    height: 100px;
+}
+
+.footer-attribution {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+.popup {
+    display: none;  /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Ensure the pop-up is on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.popup-content {
+    margin: 55% auto;
+    padding: 20px;
+}
+}
+
+  /* Mobile Devices (larger) */
+@media (min-width: 481px) and (max-width: 767px) {
+   /* Styles for small mobile devices */
+    /* header */
+    header {
+        background-color: #444;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+    header nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    header nav ul li {
+        display: inline-block;
+        margin: 0 15px;
+    }
+    
+    header button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+    }
+    
+    .icon {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+    }
+
+    #home{
+      /* Example styles for these sections on small devices */
+      padding: 0;
+      text-align: center;
+    }
+    .banner img {
+        width: 260px; /* Set the width for the profile image */
+        height: 300px; /* Set the height */
+        border-radius: 20%; /* Circular image */
+    }
+    .banner-text {
+        color: #333; /* Default text color in light mode */
+        padding: 20px;
+        text-align: left;
+        max-width: 600px;
+    }
+    
+    .banner-text h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+    
+    .banner-text p {
+        font-size: 1.5rem;
+        margin-top: 10px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    /* About Section Styles */
+    #about {
+        height: 680px;
+        padding: 50px 20px;
+    }
+    .about-text h2{
+        font-size: 2rem;
+        padding: 7px;
+    }
+    .about-text p{
+        font-size: 1rem;
+        padding: 10px;
+    }
+    /* projects */
+    .projects {
+        justify-content: center; /* Center projects on smaller screens */
+    }
+    .project a {
+        text-decoration: none;
+        color: #008080;
+        font-weight: bold;
+    }
+
+    /* badge */
+    .badge {
+        padding: 0;
+    }
+    .badge img {
+        width: 30px;  /* Adjust image size for larger screens */
+    }
+    .svg {
+        width: 30px;  /* Adjust SVG size for larger screens */
+    }
+    /* contact */
+    #contact {
+        padding: 25px 15px; /* Reduce padding for smaller screens */
+    }
+
+    .contact-card {
+        padding: 10px; /* Reduce padding inside the card */
+        width: 100%; /* Full width of the container */
+        max-width: 370px; /* Maximum width */
+    }
+
+    .contact-card input,
+    .contact-card textarea {
+        font-size: 1rem; /* Slightly smaller font size for mobile */
+    }
+
+    .contact-card button {
+        font-size: 1rem; /* Larger button font size for easy clicking */
+    }
+
+    /* Footer Styles */
+    footer {
+        background-color: #222;
+        color: #fff;
+        padding: 20px 20px;
+        text-align: center;
+    }
+
+    .footer-links li {
+        display: inline-block;
+        margin: 10px 10px;
+    }
+
+    .footer-logo img{
+        margin-top: 1px;
+        width: 120px;
+        height: 135px;
+    }
+
+    .footer-attribution {
+        margin-top: 20px;
+        font-size: 0.9em;
+    }
+    .popup {
+        display: none;  /* Hidden by default */
+        position: fixed;
+        z-index: 1000; /* Ensure the pop-up is on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 20px;
+    }
+
+    .popup-content {
+        margin: 50% auto;
+        padding: 25px;
+    }
+    .close {
+        color: #000;
+        font-size: 38px;
+        font-weight: bold;
+        position: fixed;
+        right: 10px;
+        top: 5px;
+    }
+}
+    
+    /* Tablets and Smaller Laptops */
+@media (min-width: 768px) and (max-width: 1024px) {
+       /* Styles for small mobile devices */
+    /* header */
+    header {
+        background-color: #444;
+        color: #fff;
+        padding: 15px 0;
+        text-align: center;
+    }
+    
+    header nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    header nav ul li {
+        display: inline-block;
+        margin: 0 20px;
+    }
+    header nav ul li a{
+        font-size: 1.6rem;
+    }
+    
+    header button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 15px;
+    }
+    
+    .icon {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+    }
+
+    #home{
+      /* Example styles for these sections on small devices */
+      padding: 0;
+      text-align: center;
+    }
+    .banner img {
+        width: 280px; /* Set the width for the profile image */
+        height: 320px; /* Set the height */
+        border-radius: 20%; /* Circular image */
+    }
+    .banner-text {
+        color: #333; /* Default text color in light mode */
+        padding: 20px;
+        text-align: left;
+        max-width: 700px;
+    }
+    
+    .banner-text h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+    .banner-text h3 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+    
+    .banner-text h4 {
+        font-size: 1.4rem;
+        margin-top: 10px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    /* About Section Styles */
+    #about {
+        height: 850px;
+        padding: 50px 20px;
+    }
+    .about-text h2{
+        font-size: 2.5rem;
+        padding: 10px;
+    }
+    .about-text p{
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+    /* projects */
+    .projects {
+        justify-content: center; /* Center projects on smaller screens */
+    }
+    .project a {
+        text-decoration: none;
+        color: #008080;
+        font-weight: bold;
+    }
+
+    /* badge */
+    .badge {
+        padding: 0;
+    }
+    .badge img {
+        max-width: 40px;  /* Adjust image size for larger screens */
+    }
+    .svg {
+        max-width: 40px;  /* Adjust SVG size for larger screens */
+    }
+    /* contact */
+    #contact {
+        padding: 30px 25px; /* Reduce padding for smaller screens */
+    }
+
+    .contact-card {
+        padding: 15px; /* Reduce padding inside the card */
+        width: 100%; /* Full width of the container */
+        max-width: 380px; /* Maximum width */
+    }
+
+    .contact-card input,
+    .contact-card textarea {
+        font-size: 1rem; /* Slightly smaller font size for mobile */
+    }
+
+    .contact-card button {
+        font-size: 1rem; /* Larger button font size for easy clicking */
+    }
+
+    /* Footer Styles */
+    footer {
+        background-color: #222;
+        color: #fff;
+        padding: 30px 30px;
+        text-align: center;
+    }
+
+    .footer-links li {
+        display: inline-block;
+        margin: 15px 15px;
+    }
+
+    .footer-logo img{
+        margin-top: 1px;
+        width: 180px;
+        height: 200px;
+    }
+
+    .footer-attribution {
+        margin-top: 20px;
+        font-size: 1em;
+    }
+    .popup {
+        display: none;  /* Hidden by default */
+        position: fixed;
+        z-index: 1000; /* Ensure the pop-up is on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 20px;
+    }
+
+    .popup-content {
+        margin: 37% auto;
+        padding: 20px;
+    }
+    .close {
+        color: #000;
+        font-size: 38px;
+        font-weight: bold;
+        position: fixed;
+        right: 10px;
+        top: 5px;
+    }
+}
+
+    /* Laptops and Small Desktop Screens */
+@media (min-width: 1025px) and (max-width: 1280px) {
+       /* Styles for small mobile devices */
+    /* header */
+    header {
+        background-color: #444;
+        color: #fff;
+        padding: 15px 0;
+        text-align: center;
+    }
+    
+    header nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    header nav ul li {
+        display: inline-block;
+        margin: 0 20px;
+    }
+    header nav ul li a{
+        font-size: 1.6rem;
+    }
+    
+    header button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 15px;
+    }
+    
+    .icon {
+        width: 45px;
+        height: 45px;
+        display: inline-block;
+    }
+
+    #home{
+      /* Example styles for these sections on small devices */
+      padding: 0;
+      text-align: center;
+    }
+    .banner img {
+        width: 280px; /* Set the width for the profile image */
+        height: 320px; /* Set the height */
+        border-radius: 20%; /* Circular image */
+    }
+    .banner-text {
+        color: #333; /* Default text color in light mode */
+        padding: 20px;
+        text-align: left;
+        max-width: 700px;
+    }
+    
+    .banner-text h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+    .banner-text h3 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+    
+    .banner-text h4 {
+        font-size: 1.4rem;
+        margin-top: 10px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    /* About Section Styles */
+    #about {
+        height: 800px;
+        padding: 50px 20px;
+    }
+    .about-text h2{
+        font-size: 2.5rem;
+        padding: 10px;
+    }
+    .about-text p{
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+    /* projects */
+    .projects {
+        justify-content: center; /* Center projects on smaller screens */
+    }
+    .project a {
+        text-decoration: none;
+        color: #008080;
+        font-weight: bold;
+    }
+
+    /* badge */
+    .badge {
+        padding: 0;
+    }
+    .badge img {
+        max-width: 40px;  /* Adjust image size for larger screens */
+    }
+    .svg {
+        max-width: 40px;  /* Adjust SVG size for larger screens */
+    }
+    /* contact */
+    #contact {
+        padding: 30px 25px; /* Reduce padding for smaller screens */
+    }
+
+    .contact-card {
+        padding: 15px; /* Reduce padding inside the card */
+        width: 100%; /* Full width of the container */
+        max-width: 380px; /* Maximum width */
+    }
+
+    .contact-card input,
+    .contact-card textarea {
+        font-size: 1rem; /* Slightly smaller font size for mobile */
+    }
+
+    .contact-card button {
+        font-size: 1rem; /* Larger button font size for easy clicking */
+    }
+
+    /* Footer Styles */
+    footer {
+        background-color: #222;
+        color: #fff;
+        padding: 30px 30px;
+        text-align: center;
+    }
+
+    .footer-links li {
+        display: inline-block;
+        margin: 15px 15px;
+    }
+
+    .footer-logo img{
+        margin-top: 1px;
+        width: 190px;
+        height: 200px;
+    }
+
+    .footer-attribution {
+        margin-top: 20px;
+        font-size: 1em;
+    }
+    .popup {
+        display: none;  /* Hidden by default */
+        position: fixed;
+        z-index: 1000; /* Ensure the pop-up is on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 0px;
+    }
+
+    .popup-content {
+        margin: 37% auto;
+        padding: 20px;
+    } 
+    .close {
+        color: #000;
+        font-size: 38px;
+        font-weight: bold;
+        position: fixed;
+        right: 10px;
+        top: 5px;
+    }
+}
+  
+  /* Desktop Monitors */
+@media (min-width: 1281px) {
+    /* Styles for small mobile devices */
+    /* header */
+    header {
+        background-color: #444;
+        color: #fff;
+        padding: 15px 0;
+        text-align: center;
+    }
+    
+    header nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    header nav ul li {
+        display: inline-block;
+        margin: 0 20px;
+    }
+    header nav ul li {
+        font-size: 2rem;
+    }
+    header nav ul li a{
+        font-size: 2rem;
+    }
+    
+    header button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 15px;
+    }
+    
+    .icon {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+    }
+
+    #home{
+      /* Example styles for these sections on small devices */
+      padding: 0;
+      text-align: center;
+    }
+    .banner img {
+        width: 300px; /* Set the width for the profile image */
+        height: 330px; /* Set the height */
+        border-radius: 20%; /* Circular image */
+    }
+    .banner-text {
+        color: #333; /* Default text color in light mode */
+        padding: 20px;
+        text-align: left;
+        max-width: 700px;
+    }
+    
+    .banner-text h2 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+    .banner-text h3 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+    
+    .banner-text h4 {
+        font-size: 1.6rem;
+        margin-top: 10px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    /* About Section Styles */
+    #about {
+        height: 800px;
+        padding: 40px 20px;
+    }
+    .about-text h2{
+        font-size: 2.9rem;
+        padding: 10px;
+    }
+    .about-text p{
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+    /* projects */
+    .projects {
+        justify-content: center; /* Center projects on smaller screens */
+    }
+    .project h2{
+        font-size: 2.9;
+    }
+    .project h3{
+        font-size: 1.6;
+    }
+    .project p{
+        font-size: 1.2;
+    }
+    .project a {
+        text-decoration: none;
+        color: #008080;
+        font-weight: bold;
+    }
+
+    /* badge */
+    .badge {
+        padding: 0;
+    }
+    .badge img {
+        max-width: 50px;  /* Adjust image size for larger screens */
+    }
+    .svg {
+        max-width: 50px;  /* Adjust SVG size for larger screens */
+    }
+
+    /* contact */
+    #contact {
+        padding: 30px 30px; /* Reduce padding for smaller screens */
+    }
+
+    .contact-card {
+        padding: 25px; /* Reduce padding inside the card */
+        width: 100%; /* Full width of the container */
+        max-width: 450px; /* Maximum width */
+    }
+
+    .contact-card input,
+    .contact-card textarea {
+        font-size: 1.5rem; /* Slightly smaller font size for mobile */
+    }
+
+    .contact-card button {
+        font-size: 1.5rem; /* Larger button font size for easy clicking */
+    }
+
+    /* Footer Styles */
+    footer {
+        background-color: #222;
+        color: #fff;
+        padding: 30px 30px;
+        text-align: center;
+    }
+
+    .footer-links li {
+        display: inline-block;
+        margin: 15px 15px;
+    }
+
+    .footer-logo img{
+        margin-top: 1px;
+        width: 200px;
+        height: 230px;
+    }
+
+    .footer-attribution {
+        margin-top: 20px;
+        font-size: 1.2em;
+    }
+    .popup {
+        display: none;  /* Hidden by default */
+        position: fixed;
+        z-index: 1000; /* Ensure the pop-up is on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 20px;
+    }
+
+    .popup-content {
+        margin: 30% auto;
+        padding: 20px;
+    }
+
+    .close {
+        color: #000;
+        font-size: 38px;
+        font-weight: bold;
+        position: fixed;
+        right: 10px;
+        top: 5px;
+    }
+    /* CSS for the contact section and pop-up */
+    body.no-scroll {
+        overflow: hidden;  /* Prevent scrolling */
+        position: fixed;   /* Prevent background from moving */
+        width: 100%;       /* Prevent horizontal scroll */
+    }
+}
+  
