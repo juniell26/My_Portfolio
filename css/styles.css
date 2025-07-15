@@ -1466,6 +1466,7 @@ footer {
     .popup-content {
         margin: 30% auto;
         padding: 20px;
+        overflow-x: hidden;
     }
 
     .close {
