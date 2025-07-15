@@ -6,6 +6,7 @@ body {
     background-color: #fff;
     color: #333;
     transition: all 0.3s ease;
+    overflow-x: hidden;
 }
 
 header {
