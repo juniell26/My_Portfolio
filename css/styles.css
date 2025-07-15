@@ -600,7 +600,7 @@ body.night-mode #sun-icon {
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 300px;
+    width: 90%;
     text-align: center;
     position: relative;
 }
