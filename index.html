@@ -207,29 +207,5 @@
     <script src="js/night-mode.js"></script>
     <script src="js/pop-up.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-<script>
-  const form = document.getElementById("contact-form");
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const data = new FormData(form);
-    fetch("/", {
-      method: "POST",
-      body: data,
-    })
-      .then(() => {
-        // Show popup
-        document.getElementById("popup").style.display = "block";
-      })
-      .catch(() => {
-        alert("Oops! There was a problem submitting your form.");
-      });
-  });
-
-  function closePopup() {
-    document.getElementById("popup").style.display = "none";
-    window.location.reload();
-  }
-</script>
 </body>
 </html>
