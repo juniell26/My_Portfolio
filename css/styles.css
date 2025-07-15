@@ -731,8 +731,8 @@ body.night-mode #sun-icon {
 
     .contact-card {
         padding: 10px; /* Reduce padding inside the card */
-        width: 100%; /* Full width of the container */
-        max-width: 350px; /* Maximum width */
+        width: 90%; /* Full width of the container */
+        max-width: 300px; /* Maximum width */
     }
 
     .contact-card input,
