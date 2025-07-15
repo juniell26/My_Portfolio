@@ -11,7 +11,7 @@ function showPopup(event) {
 
     const form = event.target;
     const formData = {
-        "form-contact": form.getAttribute("name"),
+        "form-name": form.getAttribute("name"),
         name: form.name.value,
         number: form.number.value,
         email: form.email.value,
